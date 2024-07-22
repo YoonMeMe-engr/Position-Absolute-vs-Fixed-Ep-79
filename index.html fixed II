@@ -1,0 +1,63 @@
+<!-- position: absolute vs fixed -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Episode-79</title>
+        <style>
+            body {
+                background-color: blueviolet;
+                display: flex;
+                justify-content: center;
+                padding: 50px;
+            }
+
+            .parent {
+                width: 100%;
+                height: 1500px;
+                background-color: aquamarine;
+                overflow: scroll; /* font size ကြီးလိုက်တော့ စာတွေက parent ထက် ကြီးသွားချိန် စာကို scroll လုပ်လို့ရအောင်လို့ */
+                position: relative;
+            }
+
+            .child {
+                width: 100%;
+                height: 50px;
+                background-color: azure;
+                position: fixed; /* စာကို scroll လုပ်ချိန် ထိပ်မှာပဲ ကျန်နေစေချင်လို့ fixed ပေး ။ fixed က top left right bottom တို့ကို viewport ကနေစတွက်ပေး*/
+                top: 0px;
+                left: 0px;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+
+            p {
+                font-size: 25px; 
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            li {
+                display: inline-block;
+                font-size: 20px;
+                padding: 5px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <p>
+                I would like to introduce about myself. My name is Ms.Yoon Me Me from Myanmar. I am very interested in engineering field since I was young and I wanted to be an engineer. As introduction to my educational background, I passed the matriculation examination in 2008 and I got a chance to be an engineering student. That’s why I started to join Technological University, Yamethin, in September 2008. I have completed my undergraduate studies in electronics and communications engineering in September 2013. I passed with qualification during a five-year period. I got Bachelor of Engineering ( Electronics ) Degree in February 2014 and cumulative G.P.A of 4.9 out of 5.
+            </p>
+            <div class="child">
+                <ul>
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
